@@ -1,8 +1,5 @@
 (load-file "../_helpers/aoc.clj")
 
-(defn parse-int [s]
-  (Integer. s))
-
 (defn get-points [line]
   (let [matches (re-matches #"#\d+ @ (\d+),(\d+): (\d+)x(\d+)" line)
         offset-x (parse-int (nth matches 1))
